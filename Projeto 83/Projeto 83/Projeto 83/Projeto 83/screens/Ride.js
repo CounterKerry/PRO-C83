@@ -158,16 +158,6 @@ export default class RideScreen extends Component {
           transactionType = "under_maintenance";
           Alert.alert(doc.data().maintenance_message);
         }
-
-        // Verifique se está certo
-
-        <FlatList 
-          data={allTransaction} 
-          renderItem={this.renderItem} 
-          keyExtractor={(item, index) => index.toString()} 
-          onEndReached={() => this.fetchMoreTransactions(searchText)} 
-          onEndReachedThreshold={0.7}
-        />
       });
     }
 
